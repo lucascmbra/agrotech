@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="bg" cx=".5" cy=".3" r=".9"><stop offset="0" stop-color="#d7ecb0"/><stop offset=".6" stop-color="#7fb34a"/><stop offset="1" stop-color="#3f7a2a"/></radialGradient>
+<linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a30"/><stop offset="1" stop-color="#2e1d12"/></linearGradient>
+<linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8ea7a"/><stop offset="1" stop-color="#4a9a2a"/></linearGradient>
+</defs>
+<rect width="600" height="600" fill="url(#bg)"/>
+<g fill="#4f9a2e" opacity=".5"><ellipse cx="90" cy="300" rx="60" ry="120" transform="rotate(-20 90 300)"/><ellipse cx="520" cy="260" rx="55" ry="110" transform="rotate(25 520 260)"/></g>
+<path d="M0 440 Q150 410 300 430 T600 425 V600 H0Z" fill="url(#soil)"/>
+<g fill="#4a3220" opacity=".8"><circle cx="90" cy="500" r="9"/><circle cx="200" cy="540" r="12"/><circle cx="420" cy="510" r="10"/><circle cx="520" cy="550" r="8"/></g>
+<path d="M300 440 C300 380 298 330 300 250" stroke="#4d8a24" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M300 300 C220 300 150 260 130 190 C210 190 290 230 300 300Z" fill="url(#leaf)"/>
+<path d="M300 280 C380 270 450 230 475 150 C390 150 310 195 300 280Z" fill="url(#leaf)"/>
+<path d="M300 250 C270 200 280 140 310 90 C340 140 335 205 300 250Z" fill="url(#leaf)"/>
+<path d="M300 300 C250 270 200 235 150 200M300 280 C360 250 410 215 458 165M300 250 C302 200 305 150 310 100" stroke="#2f6b1b" stroke-width="3" fill="none" opacity=".55"/>
+</svg>

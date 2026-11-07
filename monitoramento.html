@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monitoramento da Plantação | AgroTech — Todos Contra a Fome</title>
+  <meta name="description"
+    content="Acompanhe as condições da sua lavoura com indicadores demonstrativos e registre observações.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="AgroTech — página inicial">
+        <img src="assets/icons/leaf.svg" alt="" width="38" height="38">
+        <span>AgroTech<small>Todos contra a fome</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"
+        aria-label="Abrir menu">
+        <span></span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="monitoramento.html" aria-current="page">Monitoramento</a></li>
+          <li><a href="ia.html">Recomendações IA</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="container page-section monitoring-page">
+      <section aria-labelledby="titulo-mon">
+        <p class="eyebrow">De olho na lavoura</p>
+        <h1 id="titulo-mon">Como está a sua lavoura?</h1>
+        <p class="lead">Confira as condições da plantação e anote o que você observou.</p>
+
+        <div class="monitor-toolbar">
+          <h2>Condições da plantação</h2>
+          <span>Leitura às 18h</span>
+        </div>
+
+        <div class="indicators" role="list" aria-label="Indicadores do cultivo">
+          <article class="indicator water" role="listitem">
+            <div class="indicator-heading"><span class="label">Umidade do solo</span><img src="assets/icons/drop.svg"
+                alt="" width="24" height="24"></div>
+            <span class="value">72<span class="metric-unit">%</span></span>
+            <svg class="metric-spark" viewBox="0 0 240 44" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 35 L34 29 L69 32 L103 19 L137 10 L171 4 L206 7 L240 13" />
+            </svg>
+          </article>
+          <article class="indicator heat" role="listitem">
+            <div class="indicator-heading"><span class="label">Temperatura</span><img src="assets/icons/thermo.svg"
+                alt="" width="24" height="24"></div>
+            <span class="value">24<span class="metric-unit">°C</span></span>
+            <svg class="metric-spark" viewBox="0 0 240 44" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 40 L34 36 L69 27 L103 15 L137 7 L171 3 L206 11 L240 15" />
+            </svg>
+          </article>
+          <article class="indicator light" role="listitem">
+            <div class="indicator-heading"><span class="label">Luminosidade</span><img src="assets/icons/sun.svg" alt=""
+                width="24" height="24"></div>
+            <span class="value">85<span class="metric-unit">%</span></span>
+            <svg class="metric-spark" viewBox="0 0 240 44" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 40 L34 30 L69 19 L103 11 L137 4 L171 2 L206 5 L240 8" />
+            </svg>
+          </article>
+        </div>
+        <p class="demo-note monitor-disclaimer">Valores de demonstração, sem conexão com sensores.
+        </p>
+      </section>
+
+      <div class="monitor-workspace">
+        <section class="obs-box" aria-labelledby="titulo-obs">
+          <div class="notes-content">
+            <div class="notes-context">
+              <div class="notes-heading"><img src="assets/icons/chat.svg" alt="" width="24" height="24"><span
+                  id="obs-count">0 anotações</span></div>
+              <h2 id="titulo-obs">Anotações da lavoura</h2>
+              <p class="notes-intro">Viu alguma mudança? Deixe uma anotação para acompanhar depois.</p>
+              <p class="demo-note" id="nota-observacoes">As anotações ficam nesta página e são apagadas quando você
+                recarrega.</p>
+            </div>
+            <div class="notes-form-area">
+              <form id="form-observacoes" novalidate>
+                <div class="field">
+                  <label for="observacao">O que você observou?</label>
+                  <textarea id="observacao" name="observacao"
+                    placeholder="Ex.: as folhas do canteiro do fundo estão amareladas." maxlength="500"
+                    aria-describedby="observacao-erro nota-observacoes"></textarea>
+                  <p class="field-error" id="observacao-erro"></p>
+                </div>
+                <button class="btn btn-block" type="submit"><img src="assets/icons/send.svg" alt="" width="20"
+                    height="20"> Guardar anotação</button>
+              </form>
+              <div class="feedback" id="feedback-observacoes" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+          <p class="notes-empty" id="obs-empty">Suas anotações vão aparecer aqui.</p>
+          <ul class="obs-list" id="lista-observacoes" aria-label="Observações registradas nesta sessão"></ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><img src="assets/icons/leaf.svg" alt="" width="22" height="22"> AgroTech | Todos Contra a
+        Fome</p>
+      <p class="footer-msg">Feito para quem vive do campo.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

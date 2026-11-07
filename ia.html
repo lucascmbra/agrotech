@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recomendações Inteligentes | AgroTech — Todos Contra a Fome</title>
+  <meta name="description" content="Veja uma demonstração de como a plataforma poderá transformar informações do cultivo em recomendações simples.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="AgroTech — página inicial">
+        <img src="assets/icons/leaf.svg" alt="" width="38" height="38">
+        <span>AgroTech<small>Todos contra a fome</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="monitoramento.html">Monitoramento</a></li>
+          <li><a href="ia.html" aria-current="page">Recomendações IA</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="container page-section recommendations-page">
+      <section aria-labelledby="titulo-ia">
+        <p class="eyebrow recommendations-heading"><img src="assets/icons/robot.svg" alt="" width="22" height="22"> Na hora de cuidar</p>
+        <h1 id="titulo-ia">Recomendações inteligentes</h1>
+        <p class="lead">Análise da sua plantação com base nos dados informados.</p>
+
+        <div id="resultado-analise" aria-live="polite" aria-atomic="true">
+          <article class="recommendation-result" id="status-card" aria-labelledby="status-titulo">
+            <span class="result-symbol" id="status-simbolo" aria-hidden="true">✓</span>
+            <div>
+              <h2 id="status-titulo">Sua plantação está saudável!</h2>
+              <p id="status-texto">Continue monitorando as condições para manter uma boa produção.</p>
+            </div>
+          </article>
+
+          <div class="recommendation-tips">
+            <h2>Dicas para um cultivo ainda melhor:</h2>
+            <ul id="lista-dicas">
+              <li>Mantenha a umidade do solo adequada.</li>
+              <li>Fique atento a possíveis pragas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="recommendation-action">
+          <button class="btn" type="button" id="btn-nova-analise" aria-controls="resultado-analise" aria-describedby="nota-analise">
+            <img src="assets/icons/refresh.svg" alt="" width="22" height="22">
+            Nova análise
+          </button>
+        </div>
+        <p class="demo-note recommendation-note" id="nota-analise">Protótipo: as análises são simuladas, sem conexão com IA ou sensores.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><img src="assets/icons/leaf.svg" alt="" width="22" height="22"> AgroTech | Todos Contra a Fome</p>
+      <p class="footer-msg">Feito para quem vive do campo.</p>
+    </div>
+  </footer>
+</body>
+</html>

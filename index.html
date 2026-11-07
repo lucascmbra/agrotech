@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início | AgroTech — Todos Contra a Fome</title>
+  <meta name="description" content="Plataforma simples e acessível para ajudar agricultores familiares a planejar, monitorar e cuidar da sua plantação.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="AgroTech — página inicial">
+        <img src="assets/icons/leaf.svg" alt="" width="38" height="38">
+        <span>AgroTech<small>Todos contra a fome</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="planejamento.html">Planejamento</a></li>
+          <li><a href="monitoramento.html">Monitoramento</a></li>
+          <li><a href="ia.html">Recomendações IA</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <video class="hero-video" id="video-header" autoplay loop muted playsinline preload="metadata" poster="assets/images/header-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source src="assets/videos/video.mp4" type="video/mp4">
+      </video>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Ao lado de quem planta</p>
+          <h1 id="titulo-hero">O cuidado com a terra<br>começa todo dia.</h1>
+          <p class="lead">Do primeiro plantio às anotações da lavoura, um lugar para organizar o cultivo e acompanhar o que acontece no campo.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="planejamento.html">Planejar meu cultivo <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#apresentacao">Conheça o projeto <img src="assets/icons/play.svg" alt="" width="20" height="20"></a>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <p>Agricultura familiar. Informação por perto.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container home-content">
+      <section aria-labelledby="titulo-ferramentas">
+        <div class="section-heading">
+          <p class="eyebrow">Na rotina da lavoura</p>
+          <h2 id="titulo-ferramentas">Por onde você quer começar?</h2>
+        </div>
+        <div class="cards">
+          <a class="card-link" href="planejamento.html">
+            <span class="card-top"><img src="assets/icons/sprout.svg" alt="" width="34" height="34"><span aria-hidden="true">01 /</span></span>
+            <strong>Antes de plantar <span aria-hidden="true">↗</span></strong>
+            <span>Reúna a cultura, a área e a localização do seu próximo plantio.</span>
+          </a>
+          <a class="card-link" href="monitoramento.html">
+            <span class="card-top"><img src="assets/icons/chart.svg" alt="" width="34" height="34"><span aria-hidden="true">02 /</span></span>
+            <strong>De olho na lavoura <span aria-hidden="true">↗</span></strong>
+            <span>Veja os indicadores de exemplo e anote o que observou no campo.</span>
+          </a>
+          <a class="card-link" href="ia.html">
+            <span class="card-top"><img src="assets/icons/chip.svg" alt="" width="34" height="34"><span aria-hidden="true">03 /</span></span>
+            <strong>Recomendações com IA <span aria-hidden="true">↗</span></strong>
+            <span>Veja como a IA pode ajudar a acompanhar o seu cultivo.</span>
+          </a>
+        </div>
+      </section>
+      <section class="pitch-section" id="apresentacao" aria-labelledby="titulo-apresentacao">
+        <div class="pitch-text">
+          <p class="eyebrow">Conheça o projeto</p>
+          <h2 id="titulo-apresentacao">A ideia por trás do AgroTech</h2>
+          <p>Por que criamos o AgroTech e como queremos apoiar quem produz? Conheça a proposta e os próximos passos do projeto.</p>
+        </div>
+        <div class="pitch-placeholder" role="note" aria-label="Vídeo de apresentação ainda não disponível">
+          <img src="assets/images/video-poster.svg" alt="" width="640" height="360">
+          <p>O vídeo de apresentação será disponibilizado aqui.</p>
+        </div>
+      </section>
+
+      <section class="project-note" aria-labelledby="titulo-projeto">
+        <h2 id="titulo-projeto">Quem produz alimento<br>precisa de apoio por perto.</h2>
+        <div>
+          <p>O AgroTech é um projeto de apoio à agricultura familiar. A proposta é reunir informações do cultivo em um lugar simples de usar, para ajudar na organização do trabalho no campo.</p>
+          <a class="text-link" href="contato.html">Fale com a gente <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><img src="assets/icons/leaf.svg" alt="" width="22" height="22"> AgroTech | Todos Contra a Fome</p>
+      <p class="footer-msg">Feito para quem vive do campo.</p>
+    </div>
+  </footer>
+</body>
+</html>

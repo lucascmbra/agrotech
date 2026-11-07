@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planejamento do Cultivo | AgroTech — Todos Contra a Fome</title>
+  <meta name="description" content="Informe cultura, área e localização para ver uma demonstração do planejamento do cultivo.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="AgroTech — página inicial">
+        <img src="assets/icons/leaf.svg" alt="" width="38" height="38">
+        <span>AgroTech<small>Todos contra a fome</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="planejamento.html" aria-current="page">Planejamento</a></li>
+          <li><a href="monitoramento.html">Monitoramento</a></li>
+          <li><a href="ia.html">Recomendações IA</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <div class="container split">
+      <section aria-labelledby="titulo-plan">
+        <p class="eyebrow">Antes de plantar</p>
+        <div class="title-with-icon">
+          <h1 id="titulo-plan">Vamos organizar<br>o próximo plantio?</h1>
+        </div>
+        <p class="lead">Conte o que você pretende plantar e onde fica a área. Vamos reunir essas informações em um resumo.</p>
+
+        <form class="form" id="form-planejamento" aria-describedby="nota-plan">
+          <div class="field">
+            <label for="cultura">O que você vai plantar?</label>
+            <div class="field-control">
+              <span class="field-icon"><img src="assets/icons/sprout.svg" alt="" width="20" height="20"></span>
+              <select id="cultura" name="cultura" required aria-describedby="cultura-erro">
+                <option value="" selected disabled>Escolha uma cultura</option>
+                <option value="milho">Milho</option>
+                <option value="soja">Soja</option>
+                <option value="feijao">Feijão</option>
+                <option value="alface">Alface</option>
+                <option value="tomate">Tomate</option>
+              </select>
+            </div>
+            <p class="field-error" id="cultura-erro"></p>
+          </div>
+          <div class="field">
+            <label for="area">Área do plantio (em hectares)</label>
+            <div class="field-control">
+              <span class="field-icon"><img src="assets/icons/area.svg" alt="" width="20" height="20"></span>
+              <input type="number" id="area" name="area" placeholder="Ex.: 2,5" required min="0.1" max="1000" step="0.1" inputmode="decimal" aria-describedby="area-erro">
+            </div>
+            <p class="field-error" id="area-erro"></p>
+          </div>
+          <div class="field">
+            <label for="localizacao">Onde fica o cultivo?</label>
+            <div class="field-control">
+              <span class="field-icon"><img src="assets/icons/pin.svg" alt="" width="20" height="20"></span>
+              <input type="text" id="localizacao" name="localizacao" placeholder="Ex.: Campinas, SP" required minlength="3" maxlength="80" autocomplete="address-level2" aria-describedby="localizacao-erro">
+            </div>
+            <p class="field-error" id="localizacao-erro"></p>
+          </div>
+          <button class="btn btn-block" type="submit">
+            <img src="assets/icons/check.svg" alt="" width="20" height="20">
+            <span>Ver resumo do plantio</span>
+          </button>
+        </form>
+
+        <div class="feedback plan-summary" id="feedback-planejamento" role="status" aria-live="polite" tabindex="-1">
+          <h2>Seu resumo do plantio está pronto.</h2>
+          <p>Confira os dados que você informou:</p>
+          <dl>
+            <div><dt>Cultura</dt><dd id="resumo-cultura"></dd></div>
+            <div><dt>Área</dt><dd id="resumo-area"></dd></div>
+            <div><dt>Localização</dt><dd id="resumo-localizacao"></dd></div>
+          </dl>
+          <a class="text-link" href="monitoramento.html">Ir para o monitoramento <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="demo-note" id="nota-plan">Você está testando uma demonstração. O resumo não inclui análise agronômica, e os dados ficam apenas nesta página.</p>
+      </section>
+
+      <figure class="page-photo planning-photo">
+        <img src="assets/images/persona2-1440.jpg" srcset="assets/images/persona2-720.jpg 720w, assets/images/persona2-1440.jpg 1440w" sizes="(max-width: 900px) calc(100vw - 48px), 46vw" alt="Pessoa usando um tablet enquanto examina as folhas de uma plantação" width="1440" height="1080" fetchpriority="high">
+        <figcaption>Cada plantio começa com um olhar atento.</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><img src="assets/icons/leaf.svg" alt="" width="22" height="22"> AgroTech | Todos Contra a Fome</p>
+      <p class="footer-msg">Feito para quem vive do campo.</p>
+    </div>
+  </footer>
+</body>
+</html>
